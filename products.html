@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="./styles/products.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo1.jpg" alt="VR Logo">
+      <h1>VR Showroom</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="Body">
+  <h2>Our Products</h2>
+  <div class="content">
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="product-cards">
+          <!-- Product cards will be dynamically generated here -->
+          <!-- Example product card -->
+          <div class="product-card">
+            <img src="./images/applevision.jpg" alt="VR Headset Pro" class="product-image">
+            <div class="product-details">
+              <h3>Apple Vision Pro</h3>
+              <p>Description: With the Vision Pro, Apple is attempting to do for VR what the iPod did for media players, and what the iPhone did for smartphones.</p>
+              <p>Price: $999.99</p>
+              <button class="add-to-cart-btn" data-name="Apple Vision Pro" data-price="999.99" data-image="./images/applevision.jpg">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <img src="./images/playsattion.jpg" alt="VR Fitness Tracker" class="product-image">
+            <div class="product-details">
+              <h3>PlayStation VR 2</h3>
+              <p>Description: The PS VR2 is one of the best headset we’ve tested. It offers dual 2K OLED HDR screens, effectively giving you 4K quality.</p>
+              <p>Price: $129.99</p>
+              <button class="add-to-cart-btn" data-name="PlayStation VR 2" data-price="129.99" data-image="./images/playsattion.jpg">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- Product 5 -->
+          <div class="product-card">
+            <img src="./images/valve.jpg" alt="VR Camera" class="product-image">
+            <div class="product-details">
+              <h3>Valve Index VR kit</h3>
+              <p>Description: Valve's Index kit remains one of the best high-end solutions on the market that provides a truly immersive VR experience.</p>
+              <p>Price: $249.99</p>
+              <button class="add-to-cart-btn" data-name="Valve Index VR kit" data-price="249.99" data-image="./images/valve.jpg">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="product-card">
+            <img src="./images/htc.webp" alt="VR Art Creation Tool" class="product-image">
+            <div class="product-details">
+              <h3>HTC Vive XR Elite</h3>
+              <p>Description: HTC Vive XR Elite tech specs: Display type: LCD | Resolution: 1920 x 1920 | Refresh rate: 90Hz | Battery life: 2 hours | Weight: 1.3 pounds | All-in-one: Yes</p>
+              <p>Price: $199.99</p>
+              <button class="add-to-cart-btn" data-name="HTC Vive XR Elite" data-price="199.99" data-image="./images/htc.webp">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<footer>
+  <div class="footer-top">
+    <p class="rights">All rights reserved &copy; 2024 VR HUB</p>
+  </div>
+  <div class="footer-bottom">
+    <div class="social-media">
+      <p class="accounts">Social Media Accounts:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <a href="https://www.linkedin.com/" target="_blank"><img src="./images/linkdin.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="./images/insta.jpg" alt="Instagram"></a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png" alt="YouTube"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png" alt="Facebook"></a>
+    </div>
+    <div class="contact-info">
+      <p>Customer Service: +1234567890</p>
+      <p>Email: vr/arinfo@example.com</p>
+      <p>Address: 12 Street, Anna Nagar, cheanni, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const productCardsContainer = document.querySelector(".product-cards");
+
+    const cardWidth = document.querySelector(".product-card").offsetWidth;
+    const cardsInView = 3; // Number of cards visible at a time
+    let currentPosition = 0;
+
+    function moveLeft() {
+      if (currentPosition < 0) {
+        currentPosition += cardWidth;
+        currentPosition = Math.min(currentPosition, 0); // Ensure currentPosition doesn't exceed 0
+        productCardsContainer.style.transform = `translateX(${currentPosition}px)`;
+      }
+    }
+
+    function moveRight() {
+      const maxPosition = -(productCardsContainer.scrollWidth - productCardsContainer.offsetWidth);
+      if (currentPosition > maxPosition) {
+        currentPosition -= cardWidth;
+        currentPosition = Math.max(currentPosition, maxPosition); // Ensure currentPosition doesn't exceed maxPosition
+        productCardsContainer.style.transform = `translateX(${currentPosition}px)`;
+      }
+    }
+
+    prevBtn.addEventListener("click", moveLeft);
+    nextBtn.addEventListener("click", moveRight);
+  });
+</script>
+</body>
+</html>

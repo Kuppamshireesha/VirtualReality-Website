@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #03092F;
+  color: #fff;
+  border: 4px solid #7A3681;
+}
+  
+  header {
+    background-color: #03092F;
+    font-style: italic;
+    padding: 20px 0;
+  }
+  .main h2{
+    padding-left: 40px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: italic;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 30px;
+    font-weight: normal;
+    font-style:italic;
+    text-shadow: 3px 3px #7A3681;
+  
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 1.5px 1.5px #7A3681;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: violet;
+    border-radius: 5%;
+  }
+  footer {
+    background-color: #05152A;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .social-media img{
+    width: 35px;
+    height: 35px;
+    border-radius: 5%;
+  }
+  .accounts{
+    font-size: 15px;
+    font-style: italic;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    font-style: italic;
+  }
+  .about-website {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .text {
+    flex: 1;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+  .vr{
+    height: 300px;
+    width: 500px;
+    border-radius: 11%;
+  }
+  footer {
+    background-color: #05152C;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer-top {
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-media {
+    display: flex;
+    padding-left: 30px;
+  }
+  
+  .social-media a {
+    margin-right: 30px;
+  }
+  
+  .contact-info {
+    text-align: right;
+    margin-right: 100px;
+    font-style: italic;
+  }
+  
